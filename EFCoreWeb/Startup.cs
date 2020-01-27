@@ -28,7 +28,7 @@ namespace EFCoreWeb
             services.AddDbContext<PeopleContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DemoConnectionString"));
-            });
+            }, ServiceLifetime.Scoped);
             services.AddRazorPages();
         }
 
